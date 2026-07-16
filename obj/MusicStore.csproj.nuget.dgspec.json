@@ -1,30 +1,37 @@
 {
   "format": 1,
   "restore": {
-    "/Users/libo/Desktop/计算机/Avalonia学习/MusicStore/MusicStore.csproj": {}
+    "D:\\小项目源码\\Avalonia学习\\MusicStore\\MusicStore.csproj": {}
   },
   "projects": {
-    "/Users/libo/Desktop/计算机/Avalonia学习/MusicStore/MusicStore.csproj": {
+    "D:\\小项目源码\\Avalonia学习\\MusicStore\\MusicStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/libo/Desktop/计算机/Avalonia学习/MusicStore/MusicStore.csproj",
+        "projectUniqueName": "D:\\小项目源码\\Avalonia学习\\MusicStore\\MusicStore.csproj",
         "projectName": "MusicStore",
-        "projectPath": "/Users/libo/Desktop/计算机/Avalonia学习/MusicStore/MusicStore.csproj",
-        "packagesPath": "/Users/libo/.nuget/packages/",
-        "outputPath": "/Users/libo/Desktop/计算机/Avalonia学习/MusicStore/obj/",
+        "projectPath": "D:\\小项目源码\\Avalonia学习\\MusicStore\\MusicStore.csproj",
+        "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
+        "outputPath": "D:\\小项目源码\\Avalonia学习\\MusicStore\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\VisualStudioSDK\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/libo/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net10.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -39,10 +46,11 @@
           "auditLevel": "low",
           "auditMode": "all"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.300"
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Avalonia": {
@@ -86,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/10.0.103/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

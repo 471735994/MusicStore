@@ -20,16 +20,20 @@ build_property.ProjectTypeGuids =
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
+build_property.EntryPointFilePath = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MusicStore
-build_property.ProjectDir = /Users/libo/Desktop/计算机/Avalonia学习/MusicStore/
+build_property.ProjectDir = D:\小项目源码\Avalonia学习\MusicStore\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[/Users/libo/Desktop/计算机/Avalonia学习/MusicStore/App.axaml]
+[D:/小项目源码/Avalonia学习/MusicStore/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/Users/libo/Desktop/计算机/Avalonia学习/MusicStore/Views/MainWindow.axaml]
+[D:/小项目源码/Avalonia学习/MusicStore/Icons.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[D:/小项目源码/Avalonia学习/MusicStore/Views/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
