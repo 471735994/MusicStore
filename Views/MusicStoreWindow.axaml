@@ -4,6 +4,7 @@
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
   xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+  xmlns:views="using:MusicStore.Views"
   Title="MusicStoreWindow"
   Width="1000"
   Height="550"
@@ -24,5 +25,14 @@
           TintOpacity="1" />
       </ExperimentalAcrylicBorder.Material>
     </ExperimentalAcrylicBorder>
+    <Panel Margin="40">
+
+      <views:MusicStoreView />
+      <WindowNotificationManager x:Name="NotificationManager" Position="TopRight" />
+    </Panel>
   </Panel>
+
+
+  <!-- <Panel Margin="40">
+  </Panel>-->
 </Window>
