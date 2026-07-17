@@ -10,7 +10,12 @@
 *.user
 *.sln.docstates
 .vs/
-
+# .NET 编译产物
+bin/
+obj/
+*.dll
+*.pdb
+*.cache
 # Build results
 
 *.sln.ide/
