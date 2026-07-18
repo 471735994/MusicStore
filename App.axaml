@@ -8,6 +8,9 @@
 
     <Application.DataTemplates>
         <local:ViewLocator />
+        <!-- <DataTemplate DataType="viewmodels:AlbumViewModel">
+            <views:AlbumView />
+        </DataTemplate>-->
     </Application.DataTemplates>
 
     <Application.Styles>
