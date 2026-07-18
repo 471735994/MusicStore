@@ -13,7 +13,7 @@
 
   <DockPanel>
     <StackPanel DockPanel.Dock="Top">
-      <TextBox PlaceholderText="Search for Albums..." Text="{Binding SearchText}" />
+      <TextBox PlaceholderText="Search for Albums..." Text="{Binding SearchText, Delay=400}" />
       <ProgressBar IsIndeterminate="True" IsVisible="{Binding IsBusy}" />
     </StackPanel>
     <Button
