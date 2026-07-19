@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Avalonia.Input;
 using MusicStore.Models;
 
 namespace MusicStore.Services
@@ -25,6 +27,32 @@ namespace MusicStore.Services
             var result = JsonSerializer.Deserialize<ItunesSearchResult>(json, s_jsonOptions);
 
             return result?.Results.Select(x => new Album(x.ArtistName, x.CollectionName, x.ArtworkUrl100.Replace("100x100bb", "600x600bb"))) ?? Enumerable.Empty<Album>();
+        }
+
+        private static string CachePath(Album album) => $"./Cache/{SanitizeFileName(album.Artist)} - {SanitizeFileName(album.Title)}";
+
+        private static object SanitizeFileName(string input)
+        {
+            foreach (var c in Path.GetInvalidFileNameChars())
+            {
+                input = input.Replace(c, '_');
+            }
+            return input;
+        }
+
+        public async Task<Stream> LoadCoverBitmapAsync(Album album)
+        {
+            var cachePath = CachePath(album);
+            if (File.Exists(cachePath + ".bmp"))
+            {
+                return File.Open(cachePath + ".bmp", FileMode.Open, FileAccess.Read, FileShare.Read);
+            }
+            else
+            {
+                var data = await s_httpClient.GetByteArrayAsync(album.CoverUrl);
+                return new MemoryStream(data);
+            }
+
         }
 
     }

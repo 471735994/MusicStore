@@ -31,7 +31,7 @@
       <Image
         Width="200"
         Height="200"
-        Source="{StaticResource CoverFallback}"
+        Source="{Binding Cover^, TargetNullValue={StaticResource CoverFallback}, FallbackValue={StaticResource CoverFallback}}"
         Stretch="Uniform" />
     </Border>
     <TextBlock HorizontalAlignment="Center" Text="{Binding Title}" />
