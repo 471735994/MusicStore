@@ -31,7 +31,7 @@ namespace MusicStore.Services
 
         private static string CachePath(Album album) => $"./Cache/{SanitizeFileName(album.Artist)} - {SanitizeFileName(album.Title)}";
 
-        private static object SanitizeFileName(string input)
+        private static string SanitizeFileName(string input)
         {
             foreach (var c in Path.GetInvalidFileNameChars())
             {

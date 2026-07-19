@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:views="using:MusicStore.Views"
     xmlns:vm="using:MusicStore.ViewModels"
     Title="MusicStore"
     d:DesignHeight="450"
@@ -41,6 +42,21 @@
                 Command="{Binding AddAlbumCommand}">
                 <PathIcon Data="{StaticResource store_microsoft_regular}" />
             </Button>
+            <ScrollViewer Margin="0,40,0,0" VerticalScrollBarVisibility="Auto">
+                <ItemsControl ItemsSource="{Binding Albums}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <views:AlbumView Margin="0,0,20,20" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </ScrollViewer>
         </Panel>
     </Panel>
 

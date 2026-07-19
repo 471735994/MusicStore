@@ -18,6 +18,7 @@
     </StackPanel>
     <Button
       HorizontalAlignment="Center"
+      Command="{Binding BuyMusicCommand}"
       Content="Buy Album"
       DockPanel.Dock="Bottom" />
     <ListBox
