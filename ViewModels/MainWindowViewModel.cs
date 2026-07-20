@@ -1,5 +1,7 @@
 ﻿using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading.Tasks;
+using Avalonia.Controls.Platform;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using CommunityToolkit.Mvvm.Messaging;
@@ -22,6 +24,7 @@ public partial class MainWindowViewModel : ObservableObject
                 m.Reply(Albums.Contains(m.Album));
             }
         );
+        LoadAlbums();
     }
 
     [RelayCommand]
@@ -30,6 +33,18 @@ public partial class MainWindowViewModel : ObservableObject
         // 将消息发送给之前注册的处理程序并等待选定的 Album
         var album = await WeakReferenceMessenger.Default.Send(new PurchaseAlbumMessage());
         if (album != null)
+        {
+            Albums.Add(album);
+            await album.SaveToDiskAsync();
+        }
+    }
+
+    private async void LoadAlbums()
+    {
+        var albums = (await s_albumService.LoadCachedAsync())
+            .Select(x => new AlbumViewModel(x))
+            .ToList();
+        foreach (var album in albums)
         {
             Albums.Add(album);
         }
